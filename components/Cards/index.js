@@ -40,8 +40,8 @@ function articleCreator(data) {
   card.appendChild(headline);
   card.appendChild(author);
   author.appendChild(imgContainer);
-  imgContainer.appendChild(image);
   author.appendChild(authorName);
+  imgContainer.appendChild(image);
 
   card.classList.add("card");
   headline.classList.add("headline");
@@ -49,8 +49,9 @@ function articleCreator(data) {
   imgContainer.classList.add("img-container");
 
   headline.textContent = data.headline;
-  author.textContent = data.authorName;
+  authorName.textContent = data.authorName;
   image.src = data.authorPhoto;
+  //   console.log(data.authorPhoto);
   authorName.textContent = `By ${data.authorName}`;
   return card;
 }
